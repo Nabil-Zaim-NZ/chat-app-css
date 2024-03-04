@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "images",
+			"path": "../../../../../Downloads/chat-app-css-illustration-master/chat-app-css-illustration-master/images"
+		},
+		{
+			"name": "design",
+			"path": "../../../../../Downloads/chat-app-css-illustration-master/chat-app-css-illustration-master/design"
+		},
+		{
+			"name": "chat-app-css",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
