@@ -6,6 +6,16 @@ body {
     overflow: hidden;
 }
 
+.main_plus_article {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+        margin-top: auto;
+
+    }
+}
 
 .purple_background_down {
     width: 300px;
@@ -42,6 +52,14 @@ main {
     position: relative;
     left: 135px;
     top: -150px;
+
+    @media screen and (max-width:1000px) {
+        left: 10%;
+        top;
+        10% transform: scale(0.6);
+
+
+    }
 
 }
 
@@ -113,6 +131,11 @@ article {
     top: 150px;
     left: 60%;
     transform: translateX(-50%);
+
+    @media screen and (max-width:1000px) {
+        top: auto;
+        bottom: 50px;
+    }
 }
 
 article>p {
@@ -259,4 +282,9 @@ input[type="radio"]:checked {
     align-items: center;
     justify-content: center;
     margin-right: 15px;
+}
+
+footer {
+    margin-bottom: 0;
+    padding: 20px;
 }
