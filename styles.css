@@ -80,6 +80,7 @@ main {
 
 .avatar_img {
     height: 50px;
+    margin: 20px;
 }
 
 .full_name {
@@ -90,6 +91,7 @@ main {
 
 .three_dots_icon {
     margin-left: auto;
+
 }
 
 .chat_person>p {
