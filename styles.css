@@ -9,7 +9,7 @@ body {
     display: flex;
     align-items: center;
 
-    @media screen and (max-width:1000px) {
+    @media screen and (max-width:700px) {
         flex-direction: column;
         margin-top: auto;
 
@@ -17,26 +17,41 @@ body {
 }
 
 .purple_background_down {
-    width: 300px;
-    aspect-ratio: 1/2;
+    display: flex;
+    width: 20vw;
+    aspect-ratio: 1/1.8;
     background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     position: absolute;
-    left: -20px;
-    top: -150px;
+    left: -50px;
+    top: 0;
     border-radius: 0 0 200px 200px;
     z-index: -1;
+
+    @media screen and (max-width:700px) {
+        width: 70vw;
+        left: -75px;
+
+    }
 
 }
 
 .purple_background_up {
-    width: 300px;
-    aspect-ratio: 1/2;
-    background-color: hsla(276, 100%, 81%, 0.1);
+    display: flex;
+    width: 20vw;
+    aspect-ratio: 1/1.8;
+    background-color: hsla(276, 96%, 45%, 0.1);
     position: absolute;
-    right: -100px;
-    bottom: -150px;
+    margin-left: auto;
+    right: -50px;
+    bottom: 0;
     border-radius: 200px 200px 0 0;
-    z-index: -1;
+
+    @media screen and (max-width:700px) {
+        width: 70vw;
+        left: -75px;
+
+    }
+
 
 }
 
@@ -45,26 +60,28 @@ main {
     border: 12px solid white;
     border-radius: 20px;
     width: 350px;
-    height: max-content;
-    box-shadow: 50px 30px 50px 2px rgb(235, 235, 235);
+    height: 700px;
+    box-shadow: 50px 40px 50px 2px rgb(199, 199, 199);
     transform: scale(0.5);
-    position: relative;
-    left: 135px;
-    top: -150px;
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 140px;
+    top: -20px;
+    z-index: 10;
 
-    @media screen and (max-width:1000px) {
-        left: 10%;
-        top;
-        10% transform: scale(0.6);
-
-
+    @media screen and (max-width:700px) {
+        position: relative;
+        left: 10px;
+        top: -150px;
     }
+
 
 }
 
 .white_decoration {
     width: 200px;
-    height: 30px;
+    height: 20px;
     background-color: white;
     position: absolute;
     left: 50%;
@@ -83,8 +100,8 @@ main {
     align-items: center;
     justify-content: space-around;
     gap: 10px;
-    height: 70px;
-
+    height: 80px;
+    width: 100%;
 }
 
 .chat_person>img:last-of-type {
@@ -131,9 +148,12 @@ article {
     left: 60%;
     transform: translateX(-50%);
 
-    @media screen and (max-width:1000px) {
-        top: auto;
-        bottom: 50px;
+    @media screen and (max-width:700px) {
+        bottom: 0;
+        justify-content: end;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -141,10 +161,11 @@ article>p {
     color: lightgrey;
     font-size: small;
     font-weight: unset;
+    margin-bottom: 50px;
 }
 
 article>h1 {
-    font-size: 36px;
+    font-size: larger;
 }
 
 footer {
@@ -175,8 +196,10 @@ img {
     background-color: hsl(270, 20%, 96%);
     display: flex;
     flex-direction: column;
-    position: relative;
-
+    position: absolute;
+    height: fit-content;
+    width: 100%;
+    bottom: 0;
 }
 
 .in_message {
@@ -286,4 +309,8 @@ input[type="radio"]:checked {
 footer {
     margin-bottom: 0;
     padding: 20px;
+    font-size: xx-small;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
