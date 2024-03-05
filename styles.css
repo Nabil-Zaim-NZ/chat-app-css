@@ -250,16 +250,6 @@ article>h1 {
     font-size: 50px;
 }
 
-footer {
-    margin-bottom: 0;
-    padding: 10px;
-    font-size: xx-small;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    bottom: 0;
-}
 
 /* Responsive design */
 @media screen and (max-width: 500px) {
