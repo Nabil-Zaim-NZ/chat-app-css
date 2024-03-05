@@ -2,106 +2,66 @@
 
 body {
     font-family: 'Rubik';
-    overflow: hidden;
 }
 
-.main_plus_article {
-    display: flex;
-    align-items: center;
-
-    @media screen and (max-width:700px) {
-        flex-direction: column;
-        margin-top: auto;
-
-    }
-}
 
 .purple_background_down {
-    display: flex;
-    width: 20vw;
-    aspect-ratio: 1/1.8;
-    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: 200px;
+    height: 500px;
     position: absolute;
-    left: -50px;
     top: 0;
+    left: -50px;
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     border-radius: 0 0 200px 200px;
-    z-index: -1;
-
-    @media screen and (max-width:700px) {
-        width: 70vw;
-        left: -75px;
-
-    }
-
 }
 
+
 .purple_background_up {
-    display: flex;
-    width: 20vw;
-    aspect-ratio: 1/1.8;
-    background-color: hsla(276, 96%, 45%, 0.1);
+    width: 200px;
+    height: 500px;
     position: absolute;
-    margin-left: auto;
-    right: -50px;
     bottom: 0;
+    right: -50px;
+    background-color: hsla(276, 96%, 45%, 0.1);
     border-radius: 200px 200px 0 0;
-
-    @media screen and (max-width:700px) {
-        width: 70vw;
-        left: -75px;
-
-    }
-
-
 }
 
 main {
-    background-color: white;
-    border: 12px solid white;
-    border-radius: 20px;
-    width: 350px;
-    height: 700px;
-    box-shadow: 50px 40px 50px 2px rgb(199, 199, 199);
-    transform: scale(0.5);
-    display: flex;
-    align-items: flex-start;
     position: absolute;
-    left: 140px;
-    top: -20px;
-    z-index: 10;
+    top: -150px;
+    left: 50px;
 
-    @media screen and (max-width:700px) {
-        position: relative;
-        left: 10px;
-        top: -150px;
-    }
-
-
+    background-color: hsl(270, 20%, 96%);
+    border: 12px solid white;
+    width: 375px;
+    height: 840px;
+    border-radius: 30px;
+    box-shadow: 8px 4px 8px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.1);
+    transform: scale(0.5);
 }
 
 .white_decoration {
     width: 200px;
     height: 20px;
     background-color: white;
-    position: absolute;
+    position: relative;
     left: 50%;
     top: -1px;
     transform: translateX(-50%);
     border-radius: 0 0 20px 20px;
-
+    z-index: 1;
 }
 
 .chat_person {
+    position: relative;
+    top: -20px;
     border-radius: 20px 20px 5px 5px;
     background: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     color: white;
     display: flex;
-    padding: 15px;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
     height: 80px;
-    width: 100%;
 }
 
 .chat_person>img:last-of-type {
@@ -114,6 +74,14 @@ main {
     height: 12px;
 }
 
+.three_dots_icon>img {
+    height: 24px;
+}
+
+.avatar_img {
+    height: 50px;
+}
+
 .full_name {
     display: flex;
     flex-direction: column;
@@ -122,65 +90,15 @@ main {
 
 .three_dots_icon {
     margin-left: auto;
-
-
-}
-
-.three_dots_icon>img {
-    height: 12px;
 }
 
 .chat_person>p {
     margin: 0;
 }
 
-
 .chat_person>p>span {
     color: lightgray;
     font-size: xx-small;
-}
-
-article {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 150px;
-    left: 60%;
-    transform: translateX(-50%);
-
-    @media screen and (max-width:700px) {
-        bottom: 0;
-        justify-content: end;
-        align-items: center;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-article>p {
-    color: lightgrey;
-    font-size: small;
-    font-weight: unset;
-    margin-bottom: 50px;
-}
-
-article>h1 {
-    font-size: larger;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    margin-top: 100px;
-}
-
-img {
-    height: 70px;
-    border-radius: 10px;
-}
-
-.avatar_img {
-    height: 40px;
 }
 
 .pictures {
@@ -188,18 +106,21 @@ img {
     gap: 10px;
     align-self: flex-end;
     margin: 5px;
-
-
 }
 
 .chat_background {
     background-color: hsl(270, 20%, 96%);
     display: flex;
+    gap: 8px;
     flex-direction: column;
-    position: absolute;
-    height: fit-content;
-    width: 100%;
-    bottom: 0;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+
+}
+
+img {
+    height: 70px;
+    border-radius: 10px;
 }
 
 .in_message {
@@ -207,7 +128,6 @@ img {
     color: hsl(276, 55%, 52%);
     background-color: hsla(276, 55%, 52%, 0.1);
     border-radius: 5px 5px 5px 0;
-    margin: 5px;
     padding: 10px;
     align-self: flex-start;
     font-size: small;
@@ -220,12 +140,13 @@ img {
     color: black;
     background-color: white;
     border-radius: 5px 5px 0 5px;
-    margin: 5px;
     padding: 10px;
     align-self: flex-end;
     font-size: small;
 
+
 }
+
 
 .walk_option>p {
     font-size: xx-small;
@@ -263,7 +184,6 @@ input[type="radio"]:checked {
     width: 150px;
     background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
     border-radius: 10px 10px 10px 0;
-    margin: 10px 0 10px 10px;
     padding: 10px;
     height: 30px;
     display: flex;
@@ -277,11 +197,12 @@ input[type="radio"]:checked {
     background-color: white;
     border-radius: 100px;
     height: 40px;
-    margin: 5px;
     color: lightgrey;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
+    position: relative;
+    padding: 10px;
+
 }
 
 .type_message {
@@ -306,11 +227,48 @@ input[type="radio"]:checked {
     margin-right: 15px;
 }
 
+article {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 35%;
+    left: 500px;
+    width: 70vw;
+
+}
+
+article>p {
+    color: gray;
+    font-size: 24px;
+    font-weight: unset;
+    margin-bottom: 50px;
+}
+
+article>h1 {
+    font-size: 50px;
+}
+
 footer {
     margin-bottom: 0;
-    padding: 20px;
+    padding: 10px;
     font-size: xx-small;
     text-align: center;
     display: flex;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media screen and (max-width: 500px) {
+
+    article {
+        position: fixed;
+        left: 50%;
+        top: auto;
+        width: 100%;
+        transform: translateX(-50%);
+
+    }
+
 }
